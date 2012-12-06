@@ -1,0 +1,10 @@
+{% extends "masterpage.html" %}
+{% block title %}{{title|escape}}{% endblock %}
+
+{% block content %}
+<p class="backlink"><a href="index.html">Return to Index</a></p>
+<h1 class="file-title">{{title|escape}}</h1>
+<div id="main">
+{{content|safe}}
+</div>
+{% endblock %}

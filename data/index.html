@@ -1,0 +1,24 @@
+{% extends "masterpage.html" %}
+{% block title %}My notes{% endblock %}
+
+{% block content %}
+<h1>Table of contents</h1>
+<div id="main">
+
+{% macro render_dir(rec, node) %}
+<ul>
+    {% for name, child in node.entries %}
+        {% if child.__class__.__name__=='FileNode' %}
+            <li><a href="{{child.link|escape}}">{{child.title|escape}}</a></li>
+        {% else %}
+            <li><p>{{name|escape}}</p>
+            {{rec(rec, child)}}
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endmacro %}
+
+{{ render_dir(render_dir, toc)}}
+</div>
+{% endblock %}
