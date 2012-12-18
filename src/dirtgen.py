@@ -60,7 +60,7 @@ def dir_to_toc(p):
     relpath = get_rel_path(p)
     backrelpath = get_back_rel_path(p)
 
-    children_names = os.listdir(p)
+    children_names = sorted(os.listdir(p))
 
     def mkentry(n):
         """ name -> (None | DirEntry) """

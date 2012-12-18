@@ -4,8 +4,7 @@
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
- */
-
+ */ 
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -149,15 +148,25 @@ code {
 }
 
 pre {
-    padding: 1em;
-    background: #DDDDDD;
+    background: #E4F8DF;
+    border-left: 0.2em solid #4A924B;
+    padding-left: 1em;
+    margin: 1em 2em;
+}
+
+pre code {
+    background: transparent;
 }
 
 blockquote {
     background: #F8EEDC;
     border-left: 0.2em solid #B3925D;
     padding-left: 1em;
+    margin: 1em 2em;
+}
 
+.toc ul, .toc ol, .toc li, .toc p {
+    margin: 0;
 }
 
 /* ==========================================================================
